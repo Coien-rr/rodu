@@ -40,7 +40,7 @@ pub fn todo_add(task: &String) {
     if let Some(p) = todo_file_locate() {
         let mut f = OpenOptions::new().append(true).open(p).unwrap();
         if let Ok(_) = f.write_all(task.as_bytes()) {
-            println!("Add New Todo Task: \"{}\"", task);
+            println!("Add New Todo Task: \"{}\"", task.trim());
         }
     }
 }
