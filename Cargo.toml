@@ -1,8 +1,9 @@
 [package]
 name = "todo"
-version = "0.1.0"
+version = "0.1.1"
+authors = ["Coien-rr <972054003@qq.com>"]
+description = "Tiny Todo CLI To Add Task In Current Dir"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+git2 = "0.18.1"
