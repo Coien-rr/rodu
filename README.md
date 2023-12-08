@@ -1,4 +1,4 @@
-# Todo
+# rodu
 
 **Tiny Todo CLI To Add Task In Current Dir**
 
@@ -7,17 +7,17 @@
 ### Add
 
 ``` sh
-todo add [task]
+rodu add [task]
 ```
 
 ### Done
 
 ``` sh
-todo done [task]
+rodu done [task]
 ```
 
 ### Display
 
 ``` sh
-todo ls
+rodu ls
 ```
