@@ -1,8 +1,6 @@
 name: Publish to Cargo
 
-on:
-     pull_request:
-          branches: [ master ]
+on: [release]
 
 jobs:
      publish:
