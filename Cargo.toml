@@ -1,6 +1,6 @@
 [package]
 name = "rodu"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Coien-rr <972054003@qq.com>"]
 description = "Tiny Todo CLI To Add Task In Current Dir"
 repository = "https://github.com/Coien-rr/rodu"

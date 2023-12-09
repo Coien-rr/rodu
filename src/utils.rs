@@ -27,7 +27,29 @@ pub fn todo_exist() -> bool {
 pub fn todo_init() {
     if let Some(p) = todo_file_locate() {
         if let Ok(_) = File::create(p) {
+            add_git_ignore_rule();
             println!("Init .todo File For This Repo")
+        }
+    }
+}
+
+// TODO: use git2 method
+fn add_git_ignore_rule() {
+    match Repository::discover(".") {
+        Ok(repo) => {
+            if let Some(root) = repo.path().parent() {
+                let mut f = OpenOptions::new()
+                    .append(true)
+                    .open(root.join(".gitignore"))
+                    .unwrap();
+                if let Ok(_) = f.write(".todo\n".as_bytes()) {
+                    println!("Add \".todo\" Git Ignore Rule");
+                }
+            }
+        }
+        Err(_) => {
+            println!("This Repo Miss Git Init");
+            return;
         }
     }
 }
